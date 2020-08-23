@@ -3941,40 +3941,44 @@ theme.Cart = (function() {
 
         _onRemoveItem: function(evt) {
             evt.preventDefault();
-            var $remove = $(evt.target);
-            var $lineItem = $remove.closest(selectors.cartItem);
-            var index = $lineItem.attr(attributes.cartItemIndex);
-            this._hideCartError();
-
-            var params = {
-                url: '/cart/change.js',
-                data: {
-                    quantity: 0,
-                    line: index
-                },
-                dataType: 'json'
-            };
-
-            $.post(params)
-                .done(
-                    function(state) {
-                        if (state.item_count === 0) {
-                            this._emptyCart();
-                        } else {
-                            this._createCart(state);
-                            this._showRemoveMessage($lineItem.clone());
-                            theme.HaloAddOn.progressBarShipping();
-                        }
-
-                        this._setCartCountBubble(state.item_count);
-
-                    }.bind(this)
-                )
-                .fail(
-                    function() {
-                        this._showCartError(null);
-                    }.bind(this)
-                );
+            var truthBeTold = window.confirm("Are you sure?")
+            if (truthBeTold) {
+                var $remove = $(evt.target);
+                var $lineItem = $remove.closest(selectors.cartItem);
+                var index = $lineItem.attr(attributes.cartItemIndex);
+                this._hideCartError();
+    
+                var params = {
+                    url: '/cart/change.js',
+                    data: {
+                        quantity: 0,
+                        line: index
+                    },
+                    dataType: 'json'
+                };
+    
+                $.post(params)
+                    .done(
+                        function(state) {
+                            if (state.item_count === 0) {
+                                this._emptyCart();
+                            } else {
+                                this._createCart(state);
+                                this._showRemoveMessage($lineItem.clone());
+                                theme.HaloAddOn.progressBarShipping();
+                            }
+    
+                            this._setCartCountBubble(state.item_count);
+    
+                        }.bind(this)
+                    )
+                    .fail(
+                        function() {
+                            this._showCartError(null);
+                        }.bind(this)
+                    );
+            } else {
+            }
         },
 
         _showRemoveMessage: function(lineItem) {
