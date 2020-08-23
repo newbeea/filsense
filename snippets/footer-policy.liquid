@@ -1,18 +1,20 @@
 <div class="policy-shipping">
-  <div class="policy-items row" data-policy-slides>
+  <div class="policy-items">
     {% for block in section.blocks%}
-    {% if block.settings.icon_policy != blank and block.settings.des_policy != blank  %}
-    <a class="item" href= " {{block.settings.link_policy}} " >
-      <p class="policy-icon">
-      	{{block.settings.icon_policy}}
-      </p>
-      <p class="policy-des" >
-          <span class="border_hover">
-            {{ block.settings.des_policy}}
-          </span>
-      </p>
-    </a>
-    {% endif %}
+      {% if block.settings.icon != blank %}
+      <div class="policy-item">
+      
+      {% if block.settings.link_policy != blank %}
+      <a href= " {{block.settings.link_policy}} " >
+      {% endif %}
+        <img class="lazyload policy-image" data-src="{{ block.settings.icon | img_url: '128x128' }}" data-sizes="auto" alt="" data-image>
+        <div class="policy-title">{{ block.settings.title}}</div>
+        <div class="policy-des" >{{ block.settings.desc}}</div>
+      {% if block.settings.link_policy != blank %}
+      </a>
+      {% endif %}
+      </div>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
