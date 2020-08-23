@@ -1,22 +1,24 @@
-{% paginate search.results by 10 %}
-  <form action="/search" method="get" role="search">
-    <input type="search" name="q" value="{{ search.terms | escape }}">
-    <button type="submit">search</button>
-  </form>
-
-  {% if search.performed %}
-    {% for item in search.results %}
-      {% if item.featured_image %}
-        <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
-          {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
-        </a>
-      {% endif %}
-      <h5>{{ item.title | link_to: item.url }}</h5>
-      <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
-    {% else %}
-      no results
-    {% endfor %}
-  {% endif %}
-
-  {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
-{% endpaginate %}
+{% comment %}
+  The contents of the search.liquid template can be found in /sections/search-template.liquid
+{% endcomment %}
+<div class="container">
+    <div class="page page-search">
+    	{% render 'breadcrumb' %}
+    	<div class="header">
+			<h2 class="title"><span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+	        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}</h2>
+	        <div class="header-search__form ">
+	            <form action="{{ routes.search_url }}" method="get" class="search-bar" role="search">
+	                <input type="hidden" name="type" value="product">
+	                <input type="search" name="q"
+	                    placeholder="{{ 'general.search.placeholder' | t }}"
+	                    class="input-group-field header-search__input" aria-label="Search Site" autocomplete="off">
+	                <button type="submit" class="btn-search icon-search" title="search">
+	                    <svg class="icon"><use xlink:href="#icon-search" /></svg>
+	                </button>
+	            </form>
+	        </div>
+		</div>
+        {% section 'search-template' %}
+    </div>
+</div>
