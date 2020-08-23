@@ -6,6 +6,8 @@ production:
   password: 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
   theme_id: "83503382614"
   store: malianghang.myshopify.com
+  ignore_files:
+  - config/settings_data.json
 test:
   password: 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
   theme_id: "83558367318"

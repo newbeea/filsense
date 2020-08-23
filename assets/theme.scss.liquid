@@ -23179,13 +23179,16 @@ $bg_sold_out : {{ settings.bg_sold_out }};
 .home-sub-banner-style-two .banner-item .content-box {
   pointer-events:none;
 }
-.policy-items {
-  flex-wrap: wrap;
+.policy-item-list {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include flex-wrap (wrap);
   .policy-image {
     margin:auto;
   }
   .policy-item {
     width: 25%;
+    text-align: center;
     @media (max-width: 768px){
       width: 50%;
     }
