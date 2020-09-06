@@ -23154,6 +23154,25 @@ $bg_sold_out : {{ settings.bg_sold_out }};
 .page-collections-custom .collection-header-custom .top-header {
   margin-bottom: 0;
 }
+.collection-header-custom {
+  .collection-image {
+    .mb {
+      display: none;
+    }
+    .pc {
+      display: block;
+    }
+    @media (max-width: 768px){
+      .mb {
+        display: block;
+      }
+      .pc {
+        display: none;
+      }
+    }
+    
+  }
+}
 @media (max-width: 768px){
   .breadcrumb {
     display: none;
@@ -23219,5 +23238,26 @@ $bg_sold_out : {{ settings.bg_sold_out }};
       color: {{settings.footer_link_df_title}};
       font-size: 12px;
     }
+  }
+}
+.product_shop {
+  .more_info {
+    margin-bottom: 10px;
+    li {
+      list-style: disc;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.mobile-menu-icon {
+  width: 48px;
+  border-radius: 10px;
+}
+.mobile-only {
+  display: none;
+  @media (max-width: 1200px){
+    display: initial;
   }
 }

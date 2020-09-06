@@ -5,13 +5,18 @@
       <div class="top-header">
           {% if section.settings.display_collection_image %}
           <div class="collection-image">
-            {% if section.settings.collection_image != blank or collection.image %}
-                {% if section.settings.collection_image != blank %}
-                    {%- assign img_url = section.settings.collection_image | img_url: 'master' -%}
-                     <img class="lazyload" src="{{ 'loading.svg' | asset_url }}" data-src="{{ img_url }}" alt="" data-image>
+            {% if collection.metafields.global.banner_pc or collection.metafields.global.banner_mb or section.settings.collection_image != blank or collection.image %}
+                {% if collection.metafields.global.banner_pc or collection.metafields.global.banner_mb %}
+                  {%- assign img_url = collection.metafields.global.banner_pc -%}
+                  <img class="lazyload pc" src="{{ 'loading.svg' | asset_url }}" data-src="{{ img_url }}" alt="" data-image>  
+                  {%- assign img_url = collection.metafields.global.banner_mb -%}
+                  <img class="lazyload mb" src="{{ 'loading.svg' | asset_url }}" data-src="{{ img_url }}" alt="" data-image>    
                 {% elsif collection.image %}
-                    {%- assign img_url = collection.image | img_url: 'master' -%}
-                     <img class="lazyload" src="{{ 'loading.svg' | asset_url }}" data-src="{{ img_url }}" alt="" data-image>
+                  {%- assign img_url = collection.image | img_url: 'master' -%}
+                  <img class="lazyload" src="{{ 'loading.svg' | asset_url }}" data-src="{{ img_url }}" alt="" data-image>   
+                {% elsif collection.imagesection.settings.collection_image != blank %}
+                  {%- assign img_url = section.settings.collection_image | img_url: 'master' -%}
+                  <img class="lazyload" src="{{ 'loading.svg' | asset_url }}" data-src="{{ img_url }}" alt="" data-image> 
                 {% endif %}
             {% else %}
             <div class="no-image" style="padding-top: 100%">

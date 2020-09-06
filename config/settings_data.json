@@ -59,7 +59,7 @@
     "display_size_chart": true,
     "size_chart": "none",
     "size_guide_text": "Size Guide",
-    "custom_size_chart": "",
+    "custom_size_chart": "shopify:\/\/shop_images\/size_guide.png",
     "display_product_countdown": true,
     "option_countdown": "all_product",
     "text_countdown": "Limited-Time Offers, End in:",
@@ -169,7 +169,7 @@
     "color_title_border": "#a0a0a0",
     "color_button_close": "#787878",
     "color_bg_notification2": "#ffffff",
-    "display_gdpr": true,
+    "display_gdpr": false,
     "display_gdpr_mb": false,
     "show_gdpr": "left",
     "gdpr_content": "We use cookies to improve your experience on our website. Read about how we use cookies in our Privacy Policy. By browsing this website, you agree to our use of cookies.",
@@ -216,7 +216,7 @@
     "color_product_review": "#8b714a",
     "color_product_review_empty": "#dfdfe0",
     "color_product_price": "#282828",
-    "color_product_price_sale": "#282828",
+    "color_product_price_sale": "#ff2241",
     "color_product_price_presale": "#8c8c8c",
     "color_product_button_text": "#ffffff",
     "color_product_button_bg": "#ff2241",
@@ -322,20 +322,20 @@
     "back_footer_bt": "#323232",
     "footer_bottom_color": "#e0e0e0",
     "share_image": "",
-    "social_twitter_link": "https:\/\/twitter.com\/shopify",
-    "social_facebook_link": "https:\/\/facebook.com\/shopify",
-    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
-    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/Filsense-101678444994411\/?modal=admin_todo_tour",
+    "social_pinterest_link": "https:\/\/www.pinterest.co.kr\/filsensenewyork\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/filsense.newyork\/",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "",
-    "social_google_plus_link": "#",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCHhhdmcjDa8qdo4AUkN6rTg\/",
+    "social_google_plus_link": "",
     "social_vimeo_link": "",
     "show_shipping_calculator": false,
     "shipping_calculator_heading": "SHIPPING",
     "shipping_calculator_default_country": "Canada",
     "checkout_header_image": "",
-    "checkout_logo_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/new.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "large",
     "checkout_body_background_image": "",
@@ -469,7 +469,7 @@
         "type": "header",
         "settings": {
           "message": true,
-          "message_text": "Limited-Time Offers: Mid-Season Sale Up To 70% Off",
+          "message_text": "Limited-Time Offers: Mid-Season Sale Up To 50% Off",
           "message_link": "",
           "header_middle": true,
           "enable_free_shopping": true,
@@ -617,7 +617,22 @@
           "1596908413096": {
             "type": "style_1",
             "settings": {
-              "megamenu_items_1": "JEWELERY",
+              "megamenu_items_1": "TRENDING",
+              "enable_style_1_rows_4": true,
+              "title_featured_product": "Featured Products",
+              "featured_product_1_1": "",
+              "featured_product_2_1": "",
+              "featured_product_3_1": "",
+              "banner_first_style_1": "",
+              "link_banner_first_style_1": "",
+              "banner_second_style_1": "",
+              "link_banner_second_style_1": ""
+            }
+          },
+          "1598939758201": {
+            "type": "style_1",
+            "settings": {
+              "megamenu_items_1": "NECKLACES",
               "enable_style_1_rows_4": true,
               "title_featured_product": "Featured Products",
               "featured_product_1_1": "",
@@ -631,7 +646,8 @@
           }
         },
         "block_order": [
-          "1596908413096"
+          "1596908413096",
+          "1598939758201"
         ],
         "settings": {
           "horizontal_linklist": "main-menu",
@@ -646,7 +662,7 @@
           "enable_hot": true,
           "lb_hot": "Hot",
           "hot_item": "demos",
-          "display_megamenu": true
+          "display_megamenu": false
         }
       },
       "footer-2": {
@@ -655,22 +671,15 @@
           "1578310748872": {
             "type": "footer_link",
             "settings": {
-              "footer_title": "ABOUT US",
+              "footer_title": "COMPANY INFO",
               "footer_linklist": "about-us"
             }
           },
           "1578311490388": {
             "type": "footer_link",
             "settings": {
-              "footer_title": "90 Days",
+              "footer_title": "TERMS & POLICIES",
               "footer_linklist": "90-days"
-            }
-          },
-          "1578311555660": {
-            "type": "footer_link",
-            "settings": {
-              "footer_title": "FAQs & Shipping Info",
-              "footer_linklist": "faqs-shipping-info"
             }
           },
           "1578311588107": {
@@ -692,7 +701,7 @@
           "1578306070960": {
             "type": "text",
             "settings": {
-              "icon": "shopify:\/\/shop_images\/expressage.png",
+              "icon": "shopify:\/\/shop_images\/expressage_5bba09ee-c0c3-44ae-afa6-5063debb64db.png",
               "title": "FREE U.S. SHIPPING",
               "desc": "over $79.00",
               "link_policy": ""
@@ -720,7 +729,6 @@
         "block_order": [
           "1578310748872",
           "1578311490388",
-          "1578311555660",
           "1578311588107",
           "1578305429163",
           "1578306070960",
@@ -1478,8 +1486,8 @@
           "1582098699828": {
             "type": "image",
             "settings": {
-              "image": "",
-              "link": "",
+              "image": "shopify:\/\/shop_images\/family-portrait.jpg",
+              "link": "shopify:\/\/collections\/charm",
               "image_2": "",
               "link_2": ""
             }
@@ -1500,6 +1508,14 @@
               "button_title": "Button",
               "button_link": ""
             }
+          },
+          "1598863646008": {
+            "type": "product_carousel",
+            "settings": {
+              "title": "Heading",
+              "collection": "charm",
+              "number": 3
+            }
           }
         },
         "block_order": [
@@ -1511,7 +1527,8 @@
           "1583484066214",
           "1582098699828",
           "1582099102333",
-          "1582099620182"
+          "1582099620182",
+          "1598863646008"
         ],
         "settings": {
           "display_sidebar": false,
@@ -2010,7 +2027,7 @@
         "settings": {
           "collection_header_enable": true,
           "display_collection_image": true,
-          "collection_image": "shopify:\/\/shop_images\/name-necklace_4e86b44d-f013-425a-afce-a29a93857160.jpg",
+          "collection_image": "",
           "display_collection_des": false,
           "description_col": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque non nulla nulla, nec tincidunt risus morbi ultricies est ditae odio ultrices imperdiet. Cras accumsan dorci maces consequat blandi susto dusto an elementum libero non honcus purus sem sit amet enimos.",
           "display_sub_categories": true
@@ -2037,12 +2054,12 @@
           "display_product_type": false,
           "display_price": true,
           "display_subtotal": true,
-          "show_quantity_selector": true,
+          "show_quantity_selector": false,
           "display_short_description": false,
           "type_short_description": "default",
           "number_words": "16",
           "enable_payment_button": true,
-          "dpl_customers_view": true,
+          "dpl_customers_view": false,
           "title_view": "customers are viewing this product",
           "number_view": "283, 100, 59, 11, 14, 185, 193, 165, 50, 38, 99, 112, 46, 10, 125, 200, 250, 18",
           "display_product_detail_share": true,
@@ -2397,11 +2414,61 @@
       "1585538900630": {
         "type": "slideshow",
         "blocks": {
+          "1598793804250": {
+            "type": "image",
+            "settings": {
+              "image_slide": "shopify:\/\/shop_images\/a1031f2557604594356885e18cc8a1cb_50299df9-ec94-42ba-a900-d2cfbeb3362c.jpg",
+              "image_slide_mb": "shopify:\/\/shop_images\/a4fbc03d7f7abc357f33bc79dbfdfb5d_d141d13f-4ff7-49fe-8821-e3bb6b1328e4.jpg",
+              "alignment": "left",
+              "sub_heading": "",
+              "heading": "",
+              "slide-des": "",
+              "button_slide": "",
+              "link": "shopify:\/\/collections\/charm",
+              "product_1": "",
+              "coordinates_x_1": 36,
+              "coordinates_y_1": 48,
+              "product_2": "",
+              "coordinates_x_2": 20,
+              "coordinates_y_2": 20,
+              "product_3": "",
+              "coordinates_x_3": 30,
+              "coordinates_y_3": 30,
+              "product_4": "",
+              "coordinates_x_4": 30,
+              "coordinates_y_4": 30
+            }
+          },
+          "1598783940130": {
+            "type": "image",
+            "settings": {
+              "image_slide": "shopify:\/\/shop_images\/b8f310d65aebc94e65f3b373a42ad88e.png",
+              "image_slide_mb": "shopify:\/\/shop_images\/790.jpg",
+              "alignment": "left",
+              "sub_heading": "",
+              "heading": "",
+              "slide-des": "",
+              "button_slide": "",
+              "link": "shopify:\/\/collections\/photo-necklaces",
+              "product_1": "",
+              "coordinates_x_1": 36,
+              "coordinates_y_1": 48,
+              "product_2": "",
+              "coordinates_x_2": 20,
+              "coordinates_y_2": 20,
+              "product_3": "",
+              "coordinates_x_3": 30,
+              "coordinates_y_3": 30,
+              "product_4": "",
+              "coordinates_x_4": 30,
+              "coordinates_y_4": 30
+            }
+          },
           "1585538900630-0": {
             "type": "image",
             "settings": {
               "image_slide": "shopify:\/\/shop_images\/20200814183258.jpg",
-              "image_slide_mb": "shopify:\/\/shop_images\/20200814183251.jpg",
+              "image_slide_mb": "shopify:\/\/shop_images\/60322e04161cae1c6c3fc8ba87e08ec0.jpg",
               "alignment": "middle",
               "sub_heading": "",
               "heading": "",
@@ -2426,7 +2493,7 @@
             "type": "image",
             "settings": {
               "image_slide": "shopify:\/\/shop_images\/20200814180008.jpg",
-              "image_slide_mb": "shopify:\/\/shop_images\/20200814181648.jpg",
+              "image_slide_mb": "shopify:\/\/shop_images\/2_e4efab53-1f38-42bd-95ce-afc13f1a563d.jpg",
               "alignment": "middle",
               "sub_heading": "",
               "heading": "",
@@ -2449,6 +2516,8 @@
           }
         },
         "block_order": [
+          "1598793804250",
+          "1598783940130",
           "1585538900630-0",
           "1585539226731"
         ],
@@ -2918,6 +2987,7 @@
       },
       "1597749627949": {
         "type": "slideshow",
+        "disabled": true,
         "blocks": {
           "1597749627949-0": {
             "type": "image",
@@ -2975,6 +3045,26 @@
           "color_arrow_border": "",
           "color_dot": "",
           "color_dot_border": ""
+        }
+      },
+      "404-template": {
+        "type": "404-template",
+        "settings": {
+          "background": "shopify:\/\/shop_images\/web_702e8102-b2af-462f-b580-f888fae862b5.jpg",
+          "overlay_color": "#ffffff",
+          "overlay_opacity": "",
+          "number_size": "250",
+          "subtitle": "",
+          "subtitle_size": "",
+          "text_color": "#282828",
+          "btn_bgc": "#232323",
+          "btn_txtc": "#fff",
+          "btn_bdc": "#232323",
+          "btn_bgc_h": "#fff",
+          "btn_txtc_h": "#232323",
+          "btn_bdc_h": "#232323",
+          "btn_link_1": "",
+          "btn_text_1": "Return to Store"
         }
       }
     },
